@@ -161,6 +161,11 @@ namespace InputGlyphs.Display
             }
         }
 
+        public void UpdateGlyphs()
+        {
+            UpdateGlyphs(PlayerInput);
+        }
+
         private void UpdateGlyphs(PlayerInput playerInput)
         {
             Profiler.BeginSample("UpdateGlyphs");
