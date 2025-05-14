@@ -147,6 +147,11 @@ namespace InputGlyphs.Display
             }
         }
 
+        public void UpdateGlyphs()
+        {
+            UpdateGlyphs(PlayerInput);
+        }
+
         private void UpdateGlyphs(PlayerInput playerInput)
         {
             if (!playerInput.isActiveAndEnabled)
