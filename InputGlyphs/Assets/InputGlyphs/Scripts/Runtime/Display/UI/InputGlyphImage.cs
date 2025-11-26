@@ -1,4 +1,4 @@
-//#if INPUT_SYSTEM && ENABLE_INPUT_SYSTEM
+#if INPUT_SYSTEM && ENABLE_INPUT_SYSTEM
 using System.Collections.Generic;
 using System.Linq;
 using InputGlyphs.Utils;
