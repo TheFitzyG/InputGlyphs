@@ -78,11 +78,11 @@ namespace InputGlyphs.Display
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            Destroy(_texture);
+            DestroyImmediate(_texture);
             _texture = null;
             if (Image != null)
             {
-                Destroy(Image.sprite);
+                //Destroy(Image.sprite);
                 Image.sprite = null;
             }
         }
