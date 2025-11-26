@@ -1,4 +1,4 @@
-#if INPUT_SYSTEM && ENABLE_INPUT_SYSTEM
+//#if INPUT_SYSTEM && ENABLE_INPUT_SYSTEM
 using System.Collections.Generic;
 using System.Linq;
 using InputGlyphs.Utils;
@@ -177,7 +177,7 @@ namespace InputGlyphs.Display
             {
                 if (DisplayGlyphTextureGenerator.GenerateGlyphTexture(_texture, devices, _pathBuffer, GlyphsLayoutData))
                 {
-                    Destroy(Image.sprite);
+                    //Destroy(Image.sprite);
                     Image.sprite = Sprite.Create(_texture, new Rect(0, 0, _texture.width, _texture.height), new Vector2(0.5f, 0.5f), Mathf.Min(_texture.width, _texture.height));
                 }
             }
