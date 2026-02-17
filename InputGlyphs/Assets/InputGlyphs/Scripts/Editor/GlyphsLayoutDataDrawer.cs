@@ -22,6 +22,9 @@ namespace InputGlyphs.Display.Editor
                 {
                     var indexProperty = property.FindPropertyRelative(nameof(GlyphsLayoutData.Index));
                     EditorGUI.PropertyField(rect, indexProperty, new GUIContent($"Glyphs {indexProperty.displayName}"));
+
+                    var indexProperty2 = property.FindPropertyRelative(nameof(GlyphsLayoutData.FallbackIndex));
+                    EditorGUI.PropertyField(rect, indexProperty2, new GUIContent($"Glyphs {indexProperty2.displayName}"));
                 }
                 else if (layout == GlyphsLayout.Horizontal)
                 {
