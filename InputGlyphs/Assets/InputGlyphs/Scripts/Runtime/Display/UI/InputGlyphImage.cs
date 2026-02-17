@@ -173,13 +173,17 @@ namespace InputGlyphs.Display
             }
 
             var playerInputAction = playerInput.actions.FindAction(InputActionReference.action.id);
+
             if (InputLayoutPathUtility.TryGetActionBindingPath(playerInputAction, PlayerInput.currentControlScheme, _pathBuffer))
             {
                 if (DisplayGlyphTextureGenerator.GenerateGlyphTexture(_texture, devices, _pathBuffer, GlyphsLayoutData))
                 {
                     //Destroy(Image.sprite);
                     Image.sprite = Sprite.Create(_texture, new Rect(0, 0, _texture.width, _texture.height), new Vector2(0.5f, 0.5f), Mathf.Min(_texture.width, _texture.height));
-                }
+                } 
+
+
+
             }
         }
 

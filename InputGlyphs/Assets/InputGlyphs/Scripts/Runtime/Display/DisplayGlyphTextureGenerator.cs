@@ -31,7 +31,18 @@ namespace InputGlyphs.Display
 
             if (layoutData.Layout == GlyphsLayout.Single)
             {
-                return GenerateSingleGlyphTexture(texture, activeDevices, inputLayoutPaths, layoutData.Index);
+                if (GenerateSingleGlyphTexture(texture, activeDevices, inputLayoutPaths, layoutData.Index))
+                {
+                    return true;
+                }
+
+                if (layoutData.FallbackIndex != layoutData.Index)
+                {
+                    return GenerateSingleGlyphTexture(texture, activeDevices, inputLayoutPaths, layoutData.FallbackIndex);
+                }
+
+                return false;
+
             }
             else
             {
