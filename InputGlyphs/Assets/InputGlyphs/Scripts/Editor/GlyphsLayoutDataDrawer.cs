@@ -40,7 +40,7 @@ namespace InputGlyphs.Display.Editor
         {
             var layoutProperty = property.FindPropertyRelative(nameof(GlyphsLayoutData.Layout));
             var layout = (GlyphsLayout)layoutProperty.intValue;
-            var lineCount = 2;
+            var lineCount = layout == GlyphsLayout.Single ? 3 : 2;
             return EditorGUIUtility.singleLineHeight * lineCount;
         }
     }
