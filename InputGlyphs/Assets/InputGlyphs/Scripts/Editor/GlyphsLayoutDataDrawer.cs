@@ -23,6 +23,8 @@ namespace InputGlyphs.Display.Editor
                     var indexProperty = property.FindPropertyRelative(nameof(GlyphsLayoutData.Index));
                     EditorGUI.PropertyField(rect, indexProperty, new GUIContent($"Glyphs {indexProperty.displayName}"));
 
+                    rect.y += EditorGUIUtility.singleLineHeight;
+
                     var indexProperty2 = property.FindPropertyRelative(nameof(GlyphsLayoutData.FallbackIndex));
                     EditorGUI.PropertyField(rect, indexProperty2, new GUIContent($"Glyphs {indexProperty2.displayName}"));
                 }
